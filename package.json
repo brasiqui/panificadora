@@ -1,0 +1,37 @@
+{
+  "name": "my-project",
+  "version": "1.0.0",
+  "description": "da Cruz Panificadora",
+  "scripts": {
+    "dev": "moleculer-runner --env --repl --hot services/**/*.service.js",
+    "start": "moleculer-runner",
+    "cli": "moleculer connect TCP"
+  },
+  "keywords": [
+    "microservices",
+    "moleculer"
+  ],
+  "author": "Roni da Cruz Silva - 1701232",
+  "devDependencies": {
+    "moleculer-repl": "^0.6.6"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "moleculer": "^0.14.16",
+    "moleculer-db": "^0.8.15",
+    "moleculer-db-adapter-sequelize": "^0.2.15",
+    "moleculer-web": "^0.10.2",
+    "sqlite3": "^5.1.2"
+  },
+  "engines": {
+    "node": ">= 12.x.x"
+  },
+  "jest": {
+    "coverageDirectory": "../coverage",
+    "testEnvironment": "node",
+    "rootDir": "./services",
+    "roots": [
+      "../test"
+    ]
+  }
+}

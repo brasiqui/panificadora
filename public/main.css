@@ -1,0 +1,146 @@
+html {
+	font-size: 20px;
+}
+body {
+	background-image: url("bg.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: top;
+	font-family: "DM Sans", sans-serif;
+	line-height: 100%;
+}
+/* NAVBAR */
+.z-navbar__logo1 {
+	color: #dc4737;
+	font-weight: 700;
+	font-size: 1.43125rem;
+	margin-bottom: 0rem;
+}
+.z-navbar__logo2 {
+	color: #5b3627;
+	font-weight: 700;
+	font-size: 0.8625rem;
+	letter-spacing: 0.15rem;
+}
+
+.z-navbar__brand {
+	line-height: 100%;
+	margin-top: 2rem;
+}
+
+.z-navbar__align {
+	flex-grow: 0;
+}
+
+/* Container Principal */
+.z-principal__img {
+	padding-top: 2rem;
+	float: left;
+}
+
+.z-principal__titulo {
+	font-size: 1.8125rem;
+	color: #dc4737;
+}
+.z-principal__elaborar{
+	margin-top: 0.5rem;
+	color: #dc4737;
+    border-color: #dc4737;
+}
+
+.z-principal__elaborar:hover, .z-principal__elaborar:focus {
+    color: #fff;
+    background-color: #ff9999;
+    border-color: #ff9999;
+}
+
+.z-principal__add a {
+	background-color: #ff9999;
+	color: #f6f0f0;
+}
+.z-principal__add a:hover {
+    color: #f6f0f0;
+	background-color: #dc4737;
+}
+
+.table-overflow {
+    max-height:400px;
+    overflow-y:auto;
+}
+
+.z-principal__add__icon {
+	padding-right: 1rem;
+}
+
+.z-principal__cadastro {
+	display: flex;
+	/* width: 70%; */
+	border-top: 5px solid #5b3627;
+	justify-content: space-between;
+	align-items: flex-end;
+	/* margin-left: 29%;    */
+	font-weight: 700;
+	padding-top: 3rem;
+}
+
+.z-principal__tabela {
+	/* width: 70%; */
+	align-items: flex-end;
+	/* margin-left: 29%;    */
+	padding-top: 3rem;
+	border-collapse: collapse;
+}
+
+.z-principal__tabela--border {
+	border: 3px solid #ff9999;
+}
+
+.z-ingrediente__actions {
+	text-align: center;
+}
+
+.z-modal__edit {
+	cursor: pointer;
+}
+
+.z-receita__ingredientes, .z-receita__disponibilidade {
+	text-align: center;
+}
+.z-receita__ingredientes a {
+	color: #000;
+}
+
+@media screen and (max-width: 992px) {
+	html {
+		font-size: 10px;
+	}
+	.z-principal__titulo {
+		line-height: 150%;
+	}
+
+	.z-principal__img {
+		padding-top: 2rem;
+		float: left;
+	}
+}
+
+@media screen and (min-width: 992px) {
+	.z-principal__titulo {
+		line-height: 100%;
+	}
+
+	.z-navbar__menu-botao {
+		background-color: #605f5f;
+		margin-left: 2rem;
+	}
+
+	nav .navbar-nav li a {
+		color: #f6f0f0 !important;
+		font-weight: 700;
+	}
+	.z-navbar__menu-botao--active {
+		font-weight: 700;
+		background-color: #392a28;
+		border-radius: 0.3rem;
+	}
+}

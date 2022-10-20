@@ -1,0 +1,11 @@
+{
+    "sqltools.connections": [
+        {
+            "previewLimit": 50,
+            "driver": "SQLite",
+            "database": "${workspaceFolder:prova}/data/dacruz.db",
+            "name": "panificadora"
+        }
+    ],
+    "sqltools.useNodeRuntime": true
+}

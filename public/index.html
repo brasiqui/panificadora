@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,minimal-ui">
+	<title>da Cruz Panificadora</title>
+	<link rel="stylesheet" href="reset.css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="main.css">
+	<link rel="shortcut icon" type="image/ico" href="favicon.ico" />
+</head>
+
+<body onload="listarIngredientes()">
+
+	<head>
+		<section class="container z-navbar">
+			<nav class="navbar navbar-expand-lg navbar-light">
+				<div class="container-fluid">
+					<a class="navbar-brand z-navbar__brand" href="#">
+						<span class="z-navbar__logo1">Da Cruz</span><br>
+						<span class="z-navbar__logo2">Panificadora</span>
+					</a>
+					<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+						data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+						aria-expanded="false" aria-label="Toggle navigation">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+
+					<div class="collapse navbar-collapse z-navbar__align" id="navbarSupportedContent">
+						<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+							<div class="rounded-3 z-navbar__menu-botao">
+								<li class="nav-item">
+									<a class="nav-link navbar-link z-navbar__menu-botao--active"
+										href="index.html">Ingredientes</a>
+								</li>
+							</div>
+							<div class="rounded-3 z-navbar__menu-botao">
+								<li class="nav-item">
+									<a class="nav-link" href="receitas.html">Receitas</a>
+								</li>
+							</div>
+						</ul>
+					</div>
+
+				</div>
+			</nav>
+		</section>
+	</head>
+	<main>
+		<section class="container z-principal">
+			<div class="row">
+				<div class="z-principal__img col-2">
+					<img class="img-fluid" src="bolo.png">
+				</div>
+				<section class="col-9 offset-md-1">
+					<div class="z-principal__cadastro">
+						<span class="z-principal__titulo">Cadastro de Ingredientes</span>
+						<div class="rounded-3 z-principal__add" data-bs-toggle="modal" data-bs-target="#add">
+							<a class="nav-link rounded-3" href="#">
+								<i class="fa fa-plus z-principal__add__icon"></i>Ingrediente</a>
+						</div>
+
+						<!-- modal criar -->
+						<div class="modal fade" id="add" data-bs-backdrop="static" tabindex="-1" aria-labelledby="add"
+							aria-hidden="true">
+							<div class="modal-dialog">
+								<div class="modal-content">
+									<div class="modal-header">
+										<h5 class="modal-title" id="modalLabel">Novo Ingrediente</h5>
+										<button type="button" class="btn-close" data-bs-dismiss="modal"
+											aria-label="Fechar"></button>
+									</div>
+									<div class="modal-body">
+										<form id="form-modal" onsubmit="return false">
+											<div class="mb-3">
+												<label for="ingrediente-nome" class="col-form-label">Descrição:</label>
+												<input type="text" class="form-control" id="ingrediente-nome"
+													minlength="3" required>
+											</div>
+											<div class="mb-3">
+												<label for="ingrediente-qtde" class="col-form-label">Quantidade:</label>
+												<input type="number" step="0.5" class="form-control"
+													id="ingrediente-quantidade" required>
+											</div>
+											<div class="mb-3">
+												<label for="unidadeOptions" class="form-label">Un. Medida</label>
+												<input class="form-control" list="datalistOptions"
+													id="ingrediente-unidade" placeholder="Informe a unidade..."
+													required>
+												<datalist id="datalistOptions">
+													<option value="Copos">
+													<option value="Colher de Sopa">
+													<option value="Colher de Chá">
+													<option value="Xícara"></option>
+												</datalist>
+											</div>
+
+											<div class="modal-footer">
+												<button type="button" class="btn btn-secondary"
+													data-bs-dismiss="modal">Cancelar</button>
+												<button onclick="criarIngrediente()" type='submit'
+													class="btn btn-primary">Salvar</button>
+											</div>
+										</form>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- Fim do modal -->
+					</div>
+
+					<div class="z-principal__tabela">
+
+						<table class="table table-striped table-bordered z-principal__tabela--border">
+							<thead class="thead-light">
+								<tr>
+									<th scope="col">Descrição</th>
+									<th scope="col">Quantidade</th>
+									<th scope="col">Un. de Medida</th>
+									<th scope="col">Ações</th>
+								</tr>
+							</thead>
+							<tbody class="z-principal__tabela__linhas">
+								<tr>
+									<td colspan="4">Lista vazia</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</section>
+			</div>
+		</section>
+	</main>
+
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+		crossorigin="anonymous"></script>
+	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+	<script src="main.js"></script>
+	<script src="ingredientes.js"></script>
+
+</body>
+
+</html>
