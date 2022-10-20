@@ -10,7 +10,11 @@ Favor seguir os passos descritos no [Site NodeJs](https://nodejs.org/en/download
 
 ## Execução
 Baixar o repositório ou clonar com `git clone https://github.com/brasiqui/panificadora.git`  
-Entrar na pasta raiz do projeto via terminal e inserir o comando `npm run dev` command.   
+Entrar na pasta raiz do projeto via terminal e inserir os comandos
+- `npm install`
+- `npm install -g sqlite3`
+- `npm rebuild`
+- `npm run dev`<br>
 Após iniciar, abrir a url http://localhost:3000/ no seu browser.   
 Deve aparecer a tela inicial com o cadastro de ingredientes.
 
