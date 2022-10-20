@@ -1,20 +1,23 @@
 ![Roni Cruz](https://badgen.net/badge/Desenvolvido%20por/Roni%20Cruz%20-%20RA1701232/0e83cd)
 
 # da Cruz Panificadora
-Este é um projeto criado para a disciplina de Linguagem de programação III
+Este é um projeto criado para demonstração de CRUD usando HTML, CSS, JavaScript e Sqlite.
 
 ## Pré-requisitos
 
-É necessário ter o NodeJs instalado localmente para executar o projeto. Favor seguir os passos descritos no [Site NodeJs](https://nodejs.org/en/download/)
+É necessário ter o NodeJs instalado localmente para executar o projeto.  
+Favor seguir os passos descritos no [Site NodeJs](https://nodejs.org/en/download/)
 
 ## Execução
-Entrar na pasta raiz do projeto via terminal e inserir o comando `npm run dev` command.
-Após iniciar, abrir a url http://localhost:3000/ no seu browser. 
+Baixar o repositório ou clonar com `git clone https://github.com/brasiqui/panificadora.git`  
+Entrar na pasta raiz do projeto via terminal e inserir o comando `npm run dev` command.   
+Após iniciar, abrir a url http://localhost:3000/ no seu browser.   
 Deve aparecer a tela inicial com o cadastro de ingredientes.
 
 ## Backend
 
 No mesmo terminal, é possível testar alguns comandos:
+
 - `nodes` - Lista informações do backend.
 - `services` - Lista todos os serviços disponíveis via API.
 
